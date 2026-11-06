@@ -1,13 +1,18 @@
 import { Text, View, StyleSheet } from "react-native";
-import { Films } from "../data/films";
-import FilmCard from "../components/FilmCard";
 
+import Button from "@/components/ui/Button";
 export default function Index() {
   return (
     <View style={styles.container}>
-      {Films.map((film) => (
-        <FilmCard key={film.id} film={film} />
-      ))}
+      <Button
+        title="Add to watchlist"
+        variant="confirm"
+        size="lg"
+        onPress={() => {}}
+      />
+      <Button title="Remove film" variant="ghost" onPress={() => {}} />
+      <Button title="Save changes" loading={false} onPress={() => {}} />
+      <Button title="Cancel" variant="secondary" onPress={() => {}} />
     </View>
   );
 }
