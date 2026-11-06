@@ -51,15 +51,15 @@ const VARIANTS: Record<ButtonVariant, VariantStyle> = {
     text: colors.textOnColor,
   },
   secondary: {
-    background: colors.surface,
+    background: colors.secondary,
     pressedBackground: colors.border,
     text: colors.text,
-    border: colors.border,
   },
   ghost: {
     background: "transparent",
     pressedBackground: colors.surface,
     text: colors.text,
+    border: colors.border,
   },
 };
 

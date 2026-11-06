@@ -1,20 +1,22 @@
-export const colors = {
-  background: "#0F1115",
-  surface: "#1A1D24",
-  border: "#2B303B",
+import { isDark } from "@/data/userData";
 
-  text: "#F2F3F5",
-  textMuted: "#9AA0AC",
+export const colors = {
+  background: isDark ? "#0F1115" : "#F2F3F5",
+  surface: isDark ? "#1A1D24" : "#FFFFFF",
+  border: isDark ? "#2B303B" : "#D9DCE3",
+
+  text: isDark ? "#F2F3F5" : "#14161A",
+  textMuted: isDark ? "#9AA0AC" : "#5F6673",
   textOnColor: "#FFFFFF",
   textOnWarning: "#1A1300",
 
-  primary: "#E5484D",
-  confirm: "#2FA866",
-  warning: "#F5B731",
-  danger: "#D6303A",
+  primary: "#f3b200",
+  confirm: "#4c9c00",
+  warning: "#f76300",
+  danger: "#FF0000",
+  secondary: "#09acb8",
   info: "#3E8EDE",
 } as const;
-
 export const spacing = {
   xs: 4,
   sm: 8,

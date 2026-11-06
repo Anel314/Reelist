@@ -1,9 +1,14 @@
 import { Stack } from "expo-router";
+import { colors } from "../styles/Themes";
 
 export default function RootLayout() {
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ title: "My films" }} />
-    </Stack>
+    <Stack
+      screenOptions={{
+        contentStyle: { backgroundColor: colors.background },
+        headerStyle: { backgroundColor: colors.surface },
+        headerTintColor: colors.text,
+      }}
+    />
   );
 }
